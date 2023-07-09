@@ -9,4 +9,8 @@ describe("Secret Test", () => {
   it("should throw an Error if the secret has less than 3 characters", () => {
     expect(() => new Secret("12")).toThrow(SecretTooShortError);
   });
+
+  it("should return a string representation of the toString method", () => {
+    expect(new Secret("mySuperSecret").toString()).toBe("mySuperSecret");
+  });
 });
