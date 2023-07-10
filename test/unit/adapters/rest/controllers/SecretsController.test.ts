@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response, request, response } from "express";
-import { SecretStorer } from "../../../../src/domain/ports/in/SecretStorer";
-import { ValidationError } from "../../../../src/adapters/rest/controllers/ValidationError";
-import { SecretController } from "../../../../src/adapters/rest/controllers/SecretController";
-import { UrlId } from "../../../../src/domain/models/UrlId";
+import { SecretStorer } from "../../../../../src/domain/ports/in/SecretStorer";
+import { ValidationError } from "../../../../../src/adapters/rest/controllers/ValidationError";
+import { SecretController } from "../../../../../src/adapters/rest/controllers/SecretController";
+import { UrlId } from "../../../../../src/domain/models/UrlId";
 
 let req: Request;
 let res: Response;

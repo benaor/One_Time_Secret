@@ -6,9 +6,14 @@ import { UrlId } from "../../../domain/models/UrlId";
 export class SecretByIdController {
   constructor(private secretRetriever: SecretRetriever) {}
 
-  async retrieveSecretByUrl(req: Request, res: Response, next: NextFunction) {
+  retrieveSecretByUrl = async (
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ) => {
     try {
-      this.ValidateThatRequestContainUrlId(req);
+      this.validateThatRequestContainUrlId(req);
+
       const urlId = new UrlId(req.params.urlId);
       const secret = await this.secretRetriever.retrieveSecret(urlId);
 
@@ -17,9 +22,9 @@ export class SecretByIdController {
     } catch (error) {
       next(error);
     }
-  }
+  };
 
-  ValidateThatRequestContainUrlId(req: Request) {
+  validateThatRequestContainUrlId(req: Request) {
     if (!req.params?.urlId) throw new ValidationError("URL is not valid");
   }
 }

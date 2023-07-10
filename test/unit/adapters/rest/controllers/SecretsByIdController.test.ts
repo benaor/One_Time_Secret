@@ -1,9 +1,9 @@
 import { NextFunction, Request, Response, request, response } from "express";
-import { ValidationError } from "../../../../src/adapters/rest/controllers/ValidationError";
-import { SecretByIdController } from "../../../../src/adapters/rest/controllers/SecretByIdController";
-import { SecretNotFoundInRepositoryError } from "../../../../src/domain/models/errors/SecretNotFoundInRepositoryError";
-import { SecretRetriever } from "../../../../src/domain/ports/in/SecretRetriever";
-import { Secret } from "../../../../src/domain/models/Secret";
+import { ValidationError } from "../../../../../src/adapters/rest/controllers/ValidationError";
+import { SecretByIdController } from "../../../../../src/adapters/rest/controllers/SecretByIdController";
+import { SecretNotFoundInRepositoryError } from "../../../../../src/domain/models/errors/SecretNotFoundInRepositoryError";
+import { SecretRetriever } from "../../../../../src/domain/ports/in/SecretRetriever";
+import { Secret } from "../../../../../src/domain/models/Secret";
 
 let req: Request;
 let res: Response;

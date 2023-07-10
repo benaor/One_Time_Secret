@@ -6,7 +6,7 @@ import { Secret } from "../../../domain/models/Secret";
 export class SecretController {
   constructor(private secretStorer: SecretStorer) {}
 
-  async createSecret(req: Request, res: Response, next: NextFunction) {
+  createSecret = async (req: Request, res: Response, next: NextFunction) => {
     try {
       this.secretIsValidInRequest(req);
       const secret = new Secret(req.body.secret);
@@ -17,9 +17,9 @@ export class SecretController {
     } catch (error) {
       next(error);
     }
-  }
+  };
 
-  secretIsValidInRequest(req: Request) {
+  private secretIsValidInRequest(req: Request) {
     if (typeof req.body?.secret !== "string")
       throw new ValidationError("Requests body isn't valid");
   }

@@ -1,4 +1,4 @@
-import { UniqidTokenGenerator } from "../../../src/adapters/externalServices/UniqidTokenGenerator";
+import { UniqidTokenGenerator } from "../../../../src/adapters/externalServices/UniqidTokenGenerator";
 
 describe("uniqidTokenGenerator Tests", () => {
   it("Should generate a token that is longer than 10 Characters", () => {
