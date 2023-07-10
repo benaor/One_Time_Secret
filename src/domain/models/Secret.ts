@@ -6,6 +6,6 @@ export class Secret {
   }
 
   toString(): string {
-    return this.secret;
+    return String(this.secret);
   }
 }

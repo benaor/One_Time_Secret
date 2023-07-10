@@ -6,6 +6,6 @@ export class UrlId {
   }
 
   toString(): string {
-    return this.urlId;
+    return String(this.urlId);
   }
 }
