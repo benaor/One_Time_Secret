@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --forceExit",
-    "test:watch": "jest --watchAll --forceExit --coverage"
+    "test:watch": "jest --watchAll --forceExit --coverage",
+    "test:e2e": "jest --forceExit --coverage --runInBand test/e2e/**"
   },
   "repository": {
     "type": "git",
